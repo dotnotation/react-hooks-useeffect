@@ -1,7 +1,22 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Counter() {
     const [count, setCount] = useState(0)
+
+    // componentDidMount
+    useEffect(() => {
+        console.log("component mounted")
+
+        // componentWillUnmount
+        return () => {
+            console.log("component unmounted")
+        }
+    }, [])
+
+    // componentDidUpdate
+    useEffect(() => {
+        console.log("count updated")
+    }, [count])
 
     return (
         <div>
