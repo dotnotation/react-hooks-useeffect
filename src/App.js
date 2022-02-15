@@ -18,6 +18,7 @@ function App() {
       default:
         return <Counter />;;
     }
+    // this is a bit overkill and could have just been a ternary 
   }
 
   function togglePage(){
